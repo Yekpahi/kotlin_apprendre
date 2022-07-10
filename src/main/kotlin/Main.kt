@@ -92,6 +92,7 @@ fun main(args: Array<String>) {
         else -> println("$operator is invalid")
     }
 */
+    /*
     val reader = Scanner(System.`in`)
     print("Entrer un chiffre :  ")
 
@@ -102,4 +103,45 @@ fun main(args: Array<String>) {
         62,54, 100 -> println("$chiffre is a positive integer less than 1000.")
         else -> println("$chiffre is invalid")
     }
+     */
+   /* var sum = 0
+    var i = 100
+    while (i != 5) {
+        sum += i
+        --i
+    }
+    print("Sum = $sum")
+
+    */
+
+   /* for (i in 1..5) {
+        println(i)
+    }
+    println(" -------------- ")
+    for (i in 5 downTo 1 step 2) println(i)
+    println(" -------------- ")
+    var language = arrayOf("Ruby", "Kotlin", "Python", "Java", "React", "Oracle" )
+
+    for (item in language) println(item)
+    println(" -------------- ")
+
+    for (elm in language.indices) {
+        if (elm%2 == 0)
+            println(language[elm])
+    }*/
+
+    var sum = 0
+    var number: Int
+
+    while (true) {
+        print("Enter a number: ")
+        number = readLine()!!.toInt()
+
+        if (number == 0)
+            break
+
+        sum += number
+    }
+
+    print("sum = $sum")
 }
