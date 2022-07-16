@@ -1,19 +1,25 @@
 import java.util.Scanner
-class Person (_first_name : String = "UNKNOWN", _pers_age : Int = 0 ) {
-    val firstName =  _first_name.capitalize()
-    var age = _pers_age
+open class Log {
+    var data : String = ""
+    var numberOfData = 0
+    constructor(_data : String) {
+    }
 
-    init {
-        println("My name is $firstName and I am $age")
-
+    constructor(_data : String, _numberOfData : Int) {
+        data = _data
+        numberOfData = _numberOfData
+        println("$data : $_numberOfData times")
     }
 }
 
+class  AuthLog : Log {
+    constructor(_data : String) : this("From AuthLog -> " + _data, 10) {
+
+    }
+    constructor(_data : String, _numberOfData: Int) : super(_data, _numberOfData) {
+
+    }
+}
 fun main(args: Array<String>) {
-    println("Person1 is instantiated")
-    val person1 = Person("Jack", 25)
-    println("Person2 is instantiated")
-    val person2 = Person("Roger")
-    println("Person3 is instantiated")
-    val person3 = Person()
+  val p1 = AuthLog("Bad Password")
 }
