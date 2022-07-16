@@ -1,10 +1,19 @@
 import java.util.Scanner
-class Person (val first_name : String, var age : Int ) {
+class Person (_first_name : String = "UNKNOWN", _pers_age : Int = 0 ) {
+    val firstName =  _first_name.capitalize()
+    var age = _pers_age
 
+    init {
+        println("My name is $firstName and I am $age")
+
+    }
 }
 
 fun main(args: Array<String>) {
-val pers = Person("Prince", 36)
-
-    print("My name is ${pers.first_name} and I am ${pers.age}")
+    println("Person1 is instantiated")
+    val person1 = Person("Jack", 25)
+    println("Person2 is instantiated")
+    val person2 = Person("Roger")
+    println("Person3 is instantiated")
+    val person3 = Person()
 }
