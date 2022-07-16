@@ -1,27 +1,10 @@
 import java.util.Scanner
-class Lamp {
-    private var isOn : Boolean = false
+class Person (val first_name : String, var age : Int ) {
 
-    fun turnOn() {
-        isOn = true
-    }
-    fun turnOff() {
-        isOn = false
-    }
-
-    fun displayLightStatus(lamp: String) {
-        if (isOn == true)
-            println("$lamp lamp is on.")
-        else
-            println("$lamp lamp is off.")
-    }
 }
 
 fun main(args: Array<String>) {
-    val l1 = Lamp()
-    val l2 = Lamp()
-    l1.turnOn()
-    l2.turnOff()
-    l1.displayLightStatus("lamp 1")
-    l2.displayLightStatus("Lamp 2")
+val pers = Person("Prince", 36)
+
+    print("My name is ${pers.first_name} and I am ${pers.age}")
 }
